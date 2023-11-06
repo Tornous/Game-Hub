@@ -11,6 +11,8 @@ Entered Bing AI's contributions and made it to where you would go to the main pa
 ### Bing AI
 Made Issue Templates
 ----------------------------------------
+## Lucas Mutter
+Added new roadmaps ideas and added a games folder so people can make thier own games for game hub! (HTML GAMES ONLY) and upload them to the internet of sorts!!!!
 ## Name
     Update
 ----------------------------------------
