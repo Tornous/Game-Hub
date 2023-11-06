@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Totally a Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
     <style>
         body {
             overflow: hidden;
@@ -13,9 +16,7 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #f5f5f5;
         }
 
         #game-text {
@@ -25,41 +26,55 @@
             transform: translate(-50%, -50%);
             font-size: 48px;
             font-weight: bold;
-            animation: moveAndSpin 5s infinite;
+            animation: moveText 5s infinite;
         }
 
-        @keyframes moveAndSpin {
+        #easter-egg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 24px;
+            font-weight: bold;
+            animation: spinText 3s infinite;
+        }
+
+        @keyframes moveText {
             0% {
-                top: 50%;
-                left: 50%;
                 transform: translate(-50%, -50%) rotate(0deg);
             }
             25% {
-                top: 10%;
-                left: 10%;
-                transform: translate(-10%, -10%) rotate(90deg);
+                transform: translate(-50%, -50%) rotate(90deg);
             }
             50% {
-                top: 50%;
-                left: 90%;
-                transform: translate(-90%, -50%) rotate(180deg);
+                transform: translate(-50%, -50%) rotate(180deg);
             }
             75% {
-                top: 90%;
-                left: 50%;
-                transform: translate(-50%, -90%) rotate(270deg);
+                transform: translate(-50%, -50%) rotate(270deg);
             }
             100% {
-                top: 50%;
-                left: 50%;
                 transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes spinText {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
             }
         }
     </style>
 </head>
 <body>
+    <!-- Game Container -->
     <div id="game-container">
         <div id="game-text">Totally a Game</div>
+        <div id="easter-egg">Easter Egg &#x1F609;</div>
     </div>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
