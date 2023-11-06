@@ -33,10 +33,7 @@
                 if (user != "") {
                     alert("Welcome again " + user);
                 } else {
-                    user = prompt("Please enter your username (please use the username you use most):", "");
-                    if (user != "" && user != null) {
-                        setCookie("username", user, 365);
-                    }
+                    location.replace("https://tornous.github.io/program")
                 }
             }
 
