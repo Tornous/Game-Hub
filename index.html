@@ -38,13 +38,19 @@
                     }
                 }
             }
-            function redirect() {
+            function redirecttogamehub() {
                 location.replace("Game Hub/Basic.html")
+            }
+            function redirecttoaccount() {
+                location.replace("Account/Basic.html")
+            }
+            function roadmap() {
+                location.replace("Contributing/roadmap.html")
             }
         </script>
     </head>
     <body onload="checkCookie()"><p>This page will contain something soon</p></body>
-    <body onload="redirect()">
-         <button onclick="redirect()">Click here if not sent to the page</button>
+    <body>
+         <button onclick="redirecttogamehub()">Game Hub</button><button onclick="redirecttoaccount()">Account</button><button onclick="roadmap()">Roadmap</button>
     </body>
 </html>
