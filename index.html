@@ -47,10 +47,20 @@
             function roadmap() {
                 location.replace("Contributing/roadmap.html")
             }
+            function help() {
+            var confirm = confirm("are you sure you want to go to the beta of this??? (it may be very broken)")
+            if (confirm) {
+                window.alert("OK!!!! you will now be proceded to the beta of the help page!")
+                location.replace("https://lucasgames8957.github.com/programfixes/Help")
+            } else {
+                window.alert("guess not...")
+                window.alert("have fun I guess...")
+             }
+            }
         </script>
     </head>
     <body onload="checkCookie()"><p>This page will contain something soon</p></body>
     <body>
-         <button onclick="redirecttogamehub()">Game Hub</button><button onclick="redirecttoaccount()">Account</button><button onclick="roadmap()">Roadmap</button>
+         <button onclick="redirecttogamehub()">Game Hub</button><button onclick="redirecttoaccount()">Account</button><button onclick="roadmap()">Roadmap</button><button style="cursor: help;" onclick="help()">Help Page</button>
     </body>
 </html>

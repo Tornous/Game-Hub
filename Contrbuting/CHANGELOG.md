@@ -20,6 +20,11 @@ Added the Help page
 ### Bing AI
 Reviewed code
 ----------------------------------------
+## Help Creation
+### Solo (1 [Beta Stage])
+#### Lucas Mutter
+Added BETA
+----------------------------------------
 ## Name
     Update
 ----------------------------------------
