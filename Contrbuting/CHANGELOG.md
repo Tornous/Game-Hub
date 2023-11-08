@@ -24,6 +24,10 @@ Reviewed code
 ### Solo (1 [Beta Stage])
 #### Lucas Mutter
 Added BETA
+--------
+### Solo (2 [Still beta])
+#### Lucas Mutter
+added help item
 ----------------------------------------
 ## Name
     Update
