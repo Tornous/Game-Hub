@@ -13,6 +13,13 @@ Made Issue Templates
 ----------------------------------------
 ## Lucas Mutter
 Added new roadmaps ideas and added a games folder so people can make thier own games for game hub! (HTML GAMES ONLY) and upload them to the internet of sorts!!!!
+----------------------------------------
+## Colaborated
+### Lucas Mutter
+Added the Help page
+### Bing AI
+Reviewed code
+----------------------------------------
 ## Name
     Update
 ----------------------------------------
