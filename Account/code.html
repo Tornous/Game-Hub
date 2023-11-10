@@ -5,8 +5,9 @@
     <script>
         // Function to send the user back to the account page
         function Home() {
-            location.replace("https://lucasgames8957.github.io/programfixes/Account/Basic.html")
+            location.replace("https://lucasgames8957.github.io/programfixes/Account/Basic.html");
         }
+
         // Function to set a cookie with a specified name, value, and expiration days
         function setCookie(cname, cvalue, exdays) {
             let d = new Date();
@@ -25,18 +26,25 @@
 
             // Check if the entered code matches the expected code
             if (enteredCode === expectedCode) {
-                // Set the cookie named "codeVerified" to true with a 365-day expiration
-                setCookie("Contributor", "true", 50000000);
+                // Set the cookie named "Contributor" to true with a 365-day expiration
+                setCookie("Contributor", "true", 365);
+
+                // Alert the user and then navigate to the account page
                 alert("Code verified. You are now set as a contributor");
             } else {
                 // Display an error message if the entered code is incorrect
                 alert("Incorrect code. Please enter the correct 4-digit code.");
             }
+
+            // Redirect to the account page regardless of code correctness
+            Home();
         }
+
+        // Automatically run the code verification and redirect on page load
+        window.onload = checkCode;
     </script>
 </head>
 <body>
-    <!-- Button to trigger the code verification process -->
-    <button onclick="checkCode()">Verify</button>
+    <!-- This body section can be empty or include additional content as needed -->
 </body>
 </html>
