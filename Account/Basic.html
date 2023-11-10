@@ -55,7 +55,14 @@
 
         // Function to display the username based on the "username" cookie
         function displayUsername() {
-            displayStatus("username", "Your current username: " + getCookie("username"), "Username not set");
+            var username = getCookie("username");
+            var usernameElement = document.getElementById("usernameStatus");
+
+            if (username !== null) {
+                usernameElement.innerHTML = "Your username: " + username;
+            } else {
+                usernameElement.innerHTML = "Username not set";
+            }
         }
     </script>
 </head>
@@ -79,3 +86,4 @@
     <button onclick="code()">Verification</button>
 </body>
 </html>
+
