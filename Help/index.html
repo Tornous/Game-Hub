@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Help</title>
-        <script>
-            function home() {
-                window.alert("exiting Beta")
-                location.replace("https://lucasgames8957.github.io/program")
-            }
-        </script>
-    </head>
-    <body>
-        <button onclick="home()">Go Home</button>
-        <h1>Help (BETA)</h1>
-        <ul>
-            <li>To get a new username go to the account page and click change username</li>
-        </ul>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #4285f4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2a5db0;
+        }
+    </style>
+    <script>
+        function goToHome() {
+            window.alert("Exiting Beta");
+            location.replace("https://lucasgames8957.github.io/program");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="goToHome()">Go Home</button>
+    <h1>Help (BETA)</h1>
+    <ul>
+        <li>To get a new username, go to the account page and click "Change Username."</li>
+    </ul>
+</body>
 </html>
