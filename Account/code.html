@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Verification</title>
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevent search engine indexing -->
+    <script>
+        // Function to send the user back to the account page
+        function Home() {
+            location.replace("https://lucasgames8957.github.io/programfixes/Account/Basic.html");
+        }
+
+        // Function to set a cookie with a specified name, value, and expiration days
+        function setCookie(cname, cvalue, exdays) {
+            let d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Function to check the entered code and set the cookie if it's correct
+        function checkCode() {
+            // Predefined 4-digit code (change this to your desired code)
+            const expectedCode = "7253";
+
+            // Prompt the user for input
+            let enteredCode = prompt("Please enter the 4-digit code:");
+
+            // Check if the entered code matches the expected code
+            if (enteredCode === expectedCode) {
+                // Set the cookie named "Contributor" to true with a 365-day expiration
+                setCookie("Contributor", "true", 365);
+
+                // Alert the user and then navigate to the account page
+                alert("Code verified. You are now set as a contributor");
+            } else {
+                // Display an error message if the entered code is incorrect
+                alert("Incorrect code. Please enter the correct 4-digit code.");
+            }
+
+            // Redirect to the account page regardless of code correctness
+            Home();
+        }
+
+        // Automatically run the code verification and redirect on page load
+        window.onload = checkCode;
+    </script>
+</head>
+<body>
+    <!-- This body section can be empty or include additional content as needed -->
+</body>
+</html>
