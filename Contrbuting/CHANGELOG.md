@@ -3,7 +3,7 @@
     Made some major updates to contributing
 ----------------------------------------
 ## Lucas Mutter
-    Made some extra fixes to the contributing guidelines and 
+    Made some extra fixes to the contributing guidelines
 ----------------------------------------
 ## Colaborated
 ### Lucas Mutter
@@ -29,7 +29,7 @@ Added BETA
 #### Lucas Mutter
 added help item
 ----------------------------------------
-# Code Revisions Summary
+## Open AI
 
 - Revised HTML and JavaScript code for various functionalities:
   - Improved code clarity and structure
@@ -43,4 +43,9 @@ added help item
 - Added "robots" meta tag to prevent search engine indexing.
 - Enhanced existing code for better user experience and clarity.
 - Provided a summary for each code revision.
+----------------------------------------
+## Open AI (Name Pick)
+**Game Hub**
+
+I chose "Game Hub" because it aptly reflects the user's dual interest in coding and playing games. The term "Hub" suggests a central place or platform, indicating a gathering point for both coding enthusiasts and gamers. This name not only highlights the user's passion but also conveys a sense of community and collaboration in the world of coding and gaming.
 ----------------------------------------
