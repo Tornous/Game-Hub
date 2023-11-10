@@ -36,14 +36,15 @@
             location.replace("https://lucasgames8957.github.io/programfixes/Account/code.html");
         }
 
-        // Function to display the status (contributor or not)
+        // Function to display the status (contributor or username)
         function displayStatus(cookieName, trueMessage, falseMessage) {
             var status = getCookie(cookieName);
+            var statusElement = document.getElementById(cookieName + "Status");
 
-            if (status === "true") {
-                document.getElementById(cookieName + "Status").innerHTML = trueMessage;
+            if (status !== null) {
+                statusElement.innerHTML = status === "true" ? trueMessage : status;
             } else {
-                document.getElementById(cookieName + "Status").innerHTML = falseMessage;
+                statusElement.innerHTML = falseMessage;
             }
         }
 
@@ -54,7 +55,7 @@
 
         // Function to display the username based on the "username" cookie
         function displayUsername() {
-            displayStatus("username", "Your current username: " + getCookie("username"), "");
+            displayStatus("username", "Your current username: " + getCookie("username"), "Username not set");
         }
     </script>
 </head>
