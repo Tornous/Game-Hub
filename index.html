@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Program</title>
+    <script>window.msAdsQueue = window.msAdsQueue || [];</script>
+    <script async src="https://adsdk.microsoft.com/pubcenter/sdk.js?siteId=363710&publisherId=253107864" crossorigin="anonymous"></script>
     <script>
         // Function to set a cookie
         function setCookie(cname, cvalue, exdays) {
@@ -71,5 +73,14 @@
     <button onclick="redirectAccount()">Account</button>
     <button onclick="redirectToRoadmap()">Roadmap</button>
     <button style="cursor: help;" onclick="redirectToHelp()">Help Page</button>
+    <div id="ms-ad-1312365530"></div> 
+<script> 
+  window.msAdsQueue.push(() => { 
+    window.pubCenterSdk.render({ 
+      adUnitId: "1312365530", 
+      elementId: "ms-ad-1312365530" 
+    }); 
+  }); 
+</script>
 </body>
 </html>
