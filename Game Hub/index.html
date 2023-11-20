@@ -9,6 +9,8 @@
             cursor: crosshair;
         }
     </style>    
+    <script>window.msAdsQueue = window.msAdsQueue || [];</script>
+    <script async src="https://adsdk.microsoft.com/pubcenter/sdk.js?siteId=363710&publisherId=253107864" crossorigin="anonymous"></script>    
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -61,7 +63,15 @@
     <div>--------------Time---------------</div>
     <p id="dateTime"></p>
     <div>-----------------------------------</div>
-
+    <div style="position: fixed; right: 0; top: 50%; transform: translateY(-50%);" id="ms-ad-1264018992"></div> 
+    <script> 
+     window.msAdsQueue.push(() => { 
+       window.pubCenterSdk.render({ 
+         adUnitId: "1264018992", 
+         elementId: "ms-ad-1264018992" 
+       }); 
+     }); 
+    </script>
     <h2>Games:</h2>
     <ul>
         <li><a href="game1.html" style="cursor: crosshair;">Roblox</a></li>
