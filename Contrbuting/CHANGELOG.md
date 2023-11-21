@@ -60,3 +60,6 @@
     Added Words
 ### Bing
     Added Words
+----------------------------------------
+## Lucas Mutter
+    Created and added "Password Generator" and "HTML Editor"
