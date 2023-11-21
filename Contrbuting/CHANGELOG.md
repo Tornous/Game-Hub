@@ -53,3 +53,10 @@
 
     added Support
 ----------------------------------------
+## Multi Contribution
+### Javascript Kit
+    Added Games
+### Lucas Mutter
+    Added Words
+### Bing
+    Added Words
