@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="http://tornous.github.io/Game-Hub/Images/Game.ico" type="image/x-icon">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jq0i7r6vp9");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totally a Game</title>
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevent search engine indexing -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        #game-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            font-weight: bold;
+            animation: moveText 5s infinite;
+        }
+
+        #easter-egg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 24px;
+            font-weight: bold;
+            animation: spinText 3s infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            25% {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            50% {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+            75% {
+                transform: translate(-50%, -50%) rotate(270deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes spinText {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Game Container -->
+    <div id="game-container">
+        <div id="game-text">Totally a Game</div>
+        <div id="easter-egg">Easter Egg... Congrats</div>
+    </div>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

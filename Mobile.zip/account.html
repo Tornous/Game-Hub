@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "jq0i7r6vp9");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="icon" href="http://tornous.github.io/Game-Hub/Images/Person.ico" type="image/x-icon">
+    <script>
+        // Function to set a cookie with a specified name, value, and expiration days
+        function setCookie(cname, cvalue, exdays) {
+            let d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        // Function to get a cookie by name
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Function to check a cookie and prompt the user for a username if not set
+        function checkCookie() {
+            user = prompt("Please enter your username:", "");
+            if (user != "" && user != null) {
+                setCookie("username", user, 365);
+            }
+        }
+
+        // Function to send the user back to the account page
+        function code() {
+            location.replace("https://tornous.github.io/Game-Hub/Account/code.html");
+        }
+
+        // Function to display the status (contributor or username)
+        function displayStatus(cookieName, trueMessage, falseMessage) {
+            var status = getCookie(cookieName);
+            var statusElement = document.getElementById(cookieName + "Status");
+
+            if (status !== null) {
+                statusElement.innerHTML = status === "true" ? trueMessage : status;
+            } else {
+                statusElement.innerHTML = falseMessage;
+            }
+        }
+
+        // Function to display the contributor status based on the "Contributor" cookie
+        function displayContributorStatus() {
+            displayStatus("Contributor", "You are a contributor!", "You are not a contributor...");
+        }
+
+        // Function to display the username based on the "username" cookie
+        function displayUsername() {
+            var username = getCookie("username");
+            var usernameElement = document.getElementById("usernameStatus");
+
+            if (username !== null) {
+                usernameElement.innerHTML = "Your username: " + username;
+            } else {
+                usernameElement.innerHTML = "Username not set";
+            }
+        }
+        function page() {
+            location.replace("https://tornous.github.io/Game-Hub")
+        }
+    </script>
+</head>
+<body onload="displayContributorStatus(); displayUsername();">
+    <!-- Button to go home with access key "h" -->
+    <button accesskey="h" onclick="page()">Go Home</button>
+
+    <!-- Heading for the account page -->
+    <h1>Account</h1>
+
+    <!-- Display the contributor status message here -->
+    <p id="ContributorStatus"></p>
+
+    <!-- Display the username message here -->
+    <p id="usernameStatus"></p>
+
+    <!-- Button to check and change the username -->
+    <button onclick="checkCookie()">Change the username</button>
+    
+    <!-- Button to navigate to the verification page -->
+    <button onclick="code()">Verification</button>
+    <script src="//code.tidio.co/rurcrtz4cmxhqjdxkjg3euofa4fe7du1.js" async></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>JavaScript Hangman</title>
+<link rel="icon" href="http://tornous.github.io/Game-Hub/Images/Game.ico" type="image/x-icon">
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jq0i7r6vp9");
+</script>
+
+<script type="text/javascript">
+
+// HangMan II script- By Chris Fortey (http://www.c-g-f.net/)
+// For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
+// Please keep notice intact
+
+var can_play = true;
+var words = new Array("CAT", "DOG", "MOUSE", "RABBIT", "HOURSE", "MISSISSIPPI", "HOUSE", "COW", "HIPPOPOTOMONSTROSESQUIPPEDALIOPHOBIA", "ELEPHANT", "LION", "TIGER", "BEAR", "ZEBRA", "APPLE", "BANANA", "CHERRY", "DATE", "ELDERBERRY", "FIG", "GRAPE", "HONEYDEW", "ICEBERG", "JACKFRUIT", "KIWI", "LEMON", "MANGO", "NECTARINE", "ORANGE", "PAPAYA", "QUINCE", "RASPBERRY", "STRAWBERRY", "TOMATO", "UGLI", "VANILLA", "WATERMELON", "XIGUA", "YAM", "ZUCCHINI");
+
+
+var to_guess = "";
+var display_word = "";
+var used_letters = "";
+var wrong_guesses = 0;
+
+
+function selectLetter(l)
+{
+if (can_play == false)
+{
+return;
+}
+
+if (used_letters.indexOf(l) != -1)
+{
+return;
+}
+	
+used_letters += l;
+document.game.usedLetters.value = used_letters;
+	
+if (to_guess.indexOf(l) != -1)
+{
+ // correct letter guess
+pos = 0;
+temp_mask = display_word;
+
+
+while (to_guess.indexOf(l, pos) != -1)
+{
+pos = to_guess.indexOf(l, pos);			
+end = pos + 1;
+
+start_text = temp_mask.substring(0, pos);
+end_text = temp_mask.substring(end, temp_mask.length);
+
+temp_mask = start_text + l + end_text;
+pos = end;
+}
+
+display_word = temp_mask;
+document.game.displayWord.value = display_word;
+		
+if (display_word.indexOf("#") == -1)
+{
+// won
+alert("Well done, you have won!");
+can_play = false;
+}
+}
+else
+{
+// incortect letter guess
+wrong_guesses += 1;
+eval("document.hm.src=\"hm" + wrong_guesses + ".gif\"");
+		
+if (wrong_guesses == 10)
+{
+// lost
+alert("Sorry, you have lost!");
+can_play = false;
+}
+}
+}
+
+function reset()
+{
+selectWord();
+document.game.usedLetters.value = "";
+used_letters = "";
+wrong_guesses = 0;
+document.hm.src="hmstart.gif";
+}
+
+function selectWord()
+{
+can_play = true;
+random_number = Math.round(Math.random() * (words.length - 1));
+to_guess = words[random_number];
+//document.game.theWord.value = to_guess;
+	
+// display masked word
+masked_word = createMask(to_guess);
+document.game.displayWord.value = masked_word;
+display_word = masked_word;
+}
+
+function createMask(m)
+{
+mask = "";
+word_lenght = m.length;
+
+
+for (i = 0; i < word_lenght; i ++)
+{
+mask += "#";
+}
+return mask;
+}
+
+</script>
+</head>
+
+<body style="cursor: crosshair;"    onLoad="reset(); return true;">
+
+
+<h1  style="cursor: crosshair;">JavaScript Hangman</h1>
+
+<p><img src="hmstart.gif" height="125" width="75" name="hm"></p>
+<form name="game">
+<p style="cursor: crosshair;">Display Word: <input style="cursor: crosshair;" type="text" name="displayWord"><br>
+Used Letters: <input style="cursor: crosshair;" type="text" name="usedLetters"></p>
+</form>
+
+<p><a style="cursor: crosshair;" href="javascript:selectLetter('A');">A</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('B');">B</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('C');">C</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('D');">D</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('E');">E</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('F');">F</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('G');">G</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('H');">H</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('I');">I</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('J');">J</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('K');">K</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('L');">L</a>
+<a style="cursor: crosshair;" href="javascript:selectLetter('M');">M</a><br>
+<a style="cursor: crosshair;" href="javascript:selectLetter('N');">N</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('O');">O</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('P');">P</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('Q');">Q</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('R');">R</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('S');">S</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('T');">T</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('U');">U</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('V');">V</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('W');">W</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('X');">X</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('Y');">Y</a> | 
+<a style="cursor: crosshair;" href="javascript:selectLetter('Z');">Z</a></p>
+
+<p><a style="cursor: crosshair;" href="javascript:reset()">Reset game</a></p>
+
+<hr>
+</body>
+</html>
+
