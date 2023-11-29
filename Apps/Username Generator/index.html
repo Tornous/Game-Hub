@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+        <link rel="icon" href="http://tornous.github.io/Game-Hub/Images/Password.ico" type="image/x-icon">
+        <style>
+            * {
+                cursor: crosshair;
+            }
+        </style>
+            <script type="text/javascript">
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "jq0i7r6vp9");
+            </script>
+    </head>
+    <body>
+        <script>
+
+            //Random password generator- by javascriptkit.com
+            //Visit JavaScript Kit (http://javascriptkit.com) for script
+            //Credit must stay intact for use
+            
+            var keylist="1234567890QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlZzXxCcVvBbNnMm"
+            var temp=''
+            
+            function generatepass(plength){
+            temp=''
+            for (i=0;i<plength;i++)
+            temp+=keylist.charAt(Math.floor(Math.random()*keylist.length))
+            return temp
+            }
+            
+            function populateform(enterlength){
+            document.pgenerate.output.value=generatepass(enterlength)
+            }
+            </script>
+            
+            <form name="pgenerate">
+            <input type="text" size=18 name="output">
+            <input type="button" value="Generate Username" onClick="populateform(this.form.thelength.value)"><br />
+            <b>Username Length:</b> <input type="text" name="thelength" size=3 value="7">
+            </form>
+            <script src="//code.tidio.co/rurcrtz4cmxhqjdxkjg3euofa4fe7du1.js" async></script>
+    </body>
+</html>
