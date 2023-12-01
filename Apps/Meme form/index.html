@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Memes</title>
+    </head>
+    <body>
+        <SCRIPT>
+
+            /*
+            By Michael Dillon  drevil_nz@hotmail.com
+            Featured on JavaScript Kit (http://javascriptkit.com)
+            For this and over 400+ free scripts, visit http://javascriptkit.com
+            */
+            
+            var val=""
+            var counter="0"
+            themessage=new Array()
+            themessage[0]="George, you have an amazing body and a wonderful personality. Would you marry me?"
+            themessage[1]="Me when the imposter is sus: 😳"
+            themessage[2]="Please dont look at SMG3's sussy diary! 😬😬😬"
+            themessage[3]="Fard gate?!"
+            themessage[4]="hmmm... What is a Fard Gate?       HOLY CRAP! A FARD GATE IS A GATE MADE OF FARDS! 🫥"
+            themessage[5]"MEME FORM IS STRANGE!"
+            
+            x=Math.floor(Math.random()*themessage.length)
+            
+            function changer(){
+            if(counter>=themessage[x].length){return false}
+            else{
+            val+=themessage[x].charAt(counter)
+            document.myform.mytext.value=val
+            counter++
+            return false
+            }
+            }
+            function resetit(){
+            alert("LOL! Whats with your feed back?")
+            document.myform.mytext.value=""
+            counter="0"
+            val=""
+            x=Math.floor(Math.random()*themessage.length)
+            }
+            
+            </SCRIPT>
+            <button onclick
+            <DIV align=left>
+            <TABLE height=182 cellSpacing=0 cellPadding=0 width=542 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=542 height=182><FONT face=Arial>
+                  <FORM name=myform>
+                  <P><SMALL>Type in here:</SMALL></FONT></P>
+                  <P><FONT face=Arial><TEXTAREA onkeypress="return changer()" name=mytext rows=10 wrap=virtual cols=40></TEXTAREA><BR><BR><INPUT onclick=resetit() type=button value="Submit Feedback"></FONT></P></FORM></TD></TR></TBODY></TABLE>
+            </DIV>
+            
+            <p align="center"><font face="arial" size="-2">This free script provided by</font><br>
+            <font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com">JavaScript
+            Kit</a></font></p></textarea></p></p>

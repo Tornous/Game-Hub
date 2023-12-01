@@ -3,6 +3,13 @@
         "rid9.datetime",
         "wscats.html-snippets",
         "davidanson.vscode-markdownlint",
-        "github.copilot"
+        "github.copilot",
+        "tyriar.luna-paint",
+        "github.vscode-github-actions",
+        "tylerleonhardt.msft-todo-unofficial",
+        "tylerleonhardt.outlook-unofficial",
+        "ms-vsliveshare.vsliveshare",
+        "ms-edu.pxt-vscode-web",
+        "github.github-vscode-theme"
     ]
 }
