@@ -105,4 +105,4 @@ Created and added "Password Generator" and "HTML Editor"
 #### Javascript Kit
 Added the meme form
 #### Lucas Mutter
-edited messages
+edited messages, added a redirection to get to the meme form
