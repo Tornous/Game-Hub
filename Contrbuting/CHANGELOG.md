@@ -73,7 +73,7 @@ added help item
 ## Open AI (Name Pick)
 
 **Game Hub**
-I chose "Game Hub" because it aptly reflects the creator's dual interest in coding and playing games. The term "Hub" suggests a central place or platform, indicating a gathering point for both coding enthusiasts and gamers. This name not only highlights the user's passion but also conveys a sense of community and collaboration in the world of coding and gaming.
+  I chose "Game Hub" because it aptly reflects the creator's dual interest in coding and playing games. The term "Hub" suggests a central place or platform, indicating a gathering point for both coding enthusiasts and gamers. This name not only highlights the owner's passion but also conveys a sense of community and collaboration in the world of coding and gaming.
 ----------------------------------------
 
 ## Lucas Mutter
@@ -106,3 +106,6 @@ Created and added "Password Generator" and "HTML Editor"
 Added the meme form
 #### Lucas Mutter
 edited messages, added a redirection to get to the meme form
+### Single
+#### Lucas Mutter
+Added simple things to overhaul the program

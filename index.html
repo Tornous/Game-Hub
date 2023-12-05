@@ -11,8 +11,9 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "jq0i7r6vp9");
+
+        window.msAdsQueue = window.msAdsQueue || [];
     </script>
-    <script>window.msAdsQueue = window.msAdsQueue || [];</script>
     <script async src="https://adsdk.microsoft.com/pubcenter/sdk.js?siteId=363710&publisherId=253107864" crossorigin="anonymous"></script>
     <script>
         // Function to set a cookie
@@ -40,7 +41,7 @@
         }
 
         // Function to check a cookie
-        function checkCookie()) {
+        function checkCookie() {
             let user = getCookie("username");
             if (user === "") {
                 user = prompt("Please enter your username:", "");
@@ -59,7 +60,7 @@
         }
 
         function redirectToRoadmap() {
-            location.replace("Contrbuting/roadmap.html");
+            location.replace("Contributing/roadmap.html");
         }
 
         function redirectToHelp() {
@@ -67,21 +68,25 @@
         }
     </script>
 </head>
-<body onload=checkCookie()">
-    <p>This page will contain something soon</p>
-    <button style="cursor: crosshair;" onclick="redirectGameHub()">Game Hub</button>
-    <button onclick="redirectAccount()">Account</button>
-    <button style="cursor: alias;" onclick="redirectToRoadmap()">Roadmap</button>
-    <button style="cursor: help;" onclick="redirectToHelp()">Help Page</button>
-    <div id="ms-ad-1312365530"></div> 
-<script> 
-  window.msAdsQueue.push(() => { 
-    window.pubCenterSdk.render({ 
-      adUnitId: "1312365530", 
-      elementId: "ms-ad-1312365530" 
-    }); 
-  }); 
-</script>
-<script src="//code.tidio.co/rurcrtz4cmxhqjdxkjg3euofa4fe7du1.js" async></script>
+<body onload="checkCookie()">
+    <h1>Game Hub</h1>
+    <p>welcome to the game hub!</p>
+    <div>
+        <button style="cursor: crosshair;" onclick="redirectGameHub()">Game Hub</button>
+        <button onclick="redirectAccount()">Account</button>
+        <button style="cursor: alias;" onclick="redirectToRoadmap()">Roadmap</button>
+        <button style="cursor: help;" onclick="redirectToHelp()">Help Page</button>
+        <div id="ms-ad-1312365530"></div> 
+        <script> 
+            window.msAdsQueue.push(() => { 
+                window.pubCenterSdk.render({ 
+                    adUnitId: "1312365530", 
+                    elementId: "ms-ad-1312365530" 
+                }); 
+            }); 
+        </script>
+        <script src="//code.tidio.co/rurcrtz4cmxhqjdxkjg3euofa4fe7du1.js" async></script>
+    </div>
 </body>
 </html>
+
