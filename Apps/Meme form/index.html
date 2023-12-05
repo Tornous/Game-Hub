@@ -43,7 +43,7 @@
             }
             }
             function resetit(){
-            alert("LOL! Whats with your feed back?")
+            alert("NEW ONE! By the way... these arn't really memes...")
             document.myform.mytext.value=""
             counter="0"
             val=""
@@ -65,34 +65,3 @@
             <p align="center"><font face="arial" size="-2">This free script provided by</font><br>
             <font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com">JavaScript
             Kit</a></font></p></textarea></p></p>
-            <script>
-              function getCookie1(name) {
-              var cookieArr = document.cookie.split(";");
-          
-              for(var i = 0; i < cookieArr.length; i++) {
-                  var cookiePair = cookieArr[i].split("=");
-          
-                  if(name == cookiePair[0].trim()) {
-                      return decodeURIComponent(cookiePair[1]);
-                  }
-              }
-          
-              // Return null if the cookie by that name does not exist
-              return null;
-          }
-              function question() {
-                  var cookie-name = getCookie1(User)
-                  if (cookie-name) {
-                      window.clarity('identify', cookie-name);
-                  } else {
-                  let userResponse = confirm("Want to set a name?")
-                  if (userResponse) {
-                      alert("good!")
-                  } else {
-                      alert("too bad!")
-                  }
-                  location.replace("https://tornous.github.io/cookie-name")
-              }
-              }
-          </script>
-          <body onload="question()"></body>

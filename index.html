@@ -59,53 +59,14 @@
         }
 
         function redirectToRoadmap() {
-            location.replace("Contrbuting/roadmap.html"); // Fixed typo in "Contributing"
+            location.replace("Contrbuting/roadmap.html");
         }
 
         function redirectToHelp() {
-            var confirmation = confirm("Are you sure you want to go to the beta? (It may be very broken)");
-
-            if (confirmation) {
-                window.alert("OK! You will now be redirected to the beta of the help page!");
-                location.replace("https://tornous.github.io/Game-Hub/Help");
-            } else {
-                window.alert("Guess not...");
-                window.alert("Have fun, I guess...");
-            }
+            location.replace("https://tornous.github.io/Game-Hub/Help");
         }
     </script>
 </head>
-<script>
-    function getCookie1(name) {
-    var cookieArr = document.cookie.split(";");
-
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
-
-        if(name == cookiePair[0].trim()) {
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
-
-    // Return null if the cookie by that name does not exist
-    return null;
-}
-    function question() {
-        var cookie-name = getCookie1(User)
-        if (cookie-name) {
-            window.clarity('identify', cookie-name);
-        } else {
-        let userResponse = confirm("Want to set a name?")
-        if (userResponse) {
-            alert("good!")
-        } else {
-            alert("too bad!")
-        }
-        location.replace("https://tornous.github.io/cookie-name")
-    }
-    }
-</script>
-<body onload="question()"></body>
 <body onload=checkCookie()">
     <p>This page will contain something soon</p>
     <button style="cursor: crosshair;" onclick="redirectGameHub()">Game Hub</button>
