@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turtle Catch Game">
+    <meta name="author" content="Lucas Mutter">
+    <title>Turtle Catch</title>
+</head>
+<body>
+
+<script>
+let speed = Infinity;
+let message = "Catch blue before red gets you.";
+let bk = 200;
+
+class Turtle {
+    constructor() {
+        this.x = 0;
+        this.y = 0;
+        this.direction = 0;
+    }
+
+    turnto(angle) {
+        this.direction = angle;
+    }
+
+    fd(distance) {
+        this.x += distance * Math.cos(this.direction);
+        this.y += distance * Math.sin(this.direction);
+    }
+
+    touches(otherTurtle) {
+        let dx = this.x - otherTurtle.x;
+        let dy = this.y - otherTurtle.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        return distance < 1; // Adjust the threshold as needed
+    }
+
+    inside(container) {
+        // Assuming the container is a rectangular region
+        return this.x >= 0 && this.x <= container.width && this.y >= 0 && this.y <= container.height;
+    }
+}
+
+let turtle = new Turtle();
+let r = new Turtle();
+let b = new Turtle();
+
+b.turnto(0); // Initial direction for blue turtle
+
+let tick = 10;
+
+function gameTick() {
+    turtle.turnto(lastmousemove);
+    turtle.fd(6);
+
+    r.turnto(turtle.direction);
+    r.fd(4);
+
+    b.turnto(b.direction);
+    b.fd(3);
+
+    if (b.touches(turtle)) {
+        console.log("You win!");
+        clearInterval(intervalId);
+    } else if (r.touches(turtle)) {
+        console.log("Red got you!");
+        clearInterval(intervalId);
+    } else if (!b.inside(document)) {
+        console.log("Blue got away!");
+        clearInterval(intervalId);
+    }
+}
+
+let intervalId = setInterval(gameTick, tick);
+</script>
+
+</body>
+</html>
