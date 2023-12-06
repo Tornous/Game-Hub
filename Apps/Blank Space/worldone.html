@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World one</title>
+    <script>
+        function newtimes() {
+            window.alert('"World One???"');
+            window.alert("That's new");
+            window.prompt("Where are we, player?");
+            window.prompt("What should we do?");
+            item("tree");
+            window.alert("look!")
+            window.alert("It's a...")
+            window.alert("Tree?")
+            window.alert("It's strange that the blank space made something!")
+            window.alert("Wait... The tree... AAAAAAA-")
+            location.replace("void.html")
+        }
+
+        function item(item) {
+            // Accessing the canvas element
+            var canvas = document.querySelector('canvas');
+            var ctx = canvas.getContext('2d');
+
+            // Adding functionality based on the newtimes function
+            switch (item) {
+                case "tree":
+                    console.log("You found a tree!");
+                    // Drawing a tree on the canvas
+                    ctx.fillStyle = "brown";
+                    ctx.fillRect(50, 150, 20, 50);
+                    ctx.fillStyle = "green";
+                    ctx.beginPath();
+                    ctx.moveTo(60, 100);
+                    ctx.lineTo(90, 150);
+                    ctx.lineTo(30, 150);
+                    ctx.fill();
+                    break;
+                // Add more cases for other items as needed
+                default:
+                    console.log("Unknown item!");
+            }
+        }
+    </script>
+</head>
+<body onload="newtimes()">
+    <canvas></canvas>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The wrong place</title>
+    <script>
+        function home() {
+            load();
+            window.alert("oops...");
+            window.alert("uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+            window.alert("sorry about that...");
+            window.alert("OOH! I FOUND IT! LET'S GO HOME!");
+            location.replace("https://tornous.github.io");
+        }
+
+        function load() {
+            var canvas = document.querySelector('canvas');
+            var ctx = canvas.getContext('2d');
+
+            // Draw desktop background
+            ctx.fillStyle = "#6C7A89";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw icons
+            drawShortcut(ctx, 60, 60, 'https://tornous.github.io/Game-Hub/Images/Blank Space Story/DST.png', 'Don\'t Starve Together');
+            drawShortcut(ctx, 180, 60, 'https://tornous.github.io/Game-Hub/Images/Blank Space Story/steam.png', 'Steam');
+            drawShortcut(ctx, 300, 60, 'https://tornous.github.io/Game-Hub/Images/Blank Space Story/IE.png', 'Internet Explorer');
+            drawShortcut(ctx, 420, 60, 'https://tornous.github.io/Game-Hub/Images/Blank Space Story/Boblox.png', 'Boblox');
+
+            // Draw Start button
+            ctx.fillStyle = "#3498DB";
+            ctx.fillRect(10, canvas.height - 40, canvas.width - 20, 30);
+            ctx.fillStyle = "white";
+            ctx.textAlign = "center";
+            ctx.font = "bold 14px Arial";
+            ctx.fillText("Start", canvas.width / 2, canvas.height - 20);
+        }
+
+        function drawShortcut(ctx, x, y, iconPath, name) {
+            ctx.fillStyle = "#ECF0F1";
+            var icon = new Image();
+            icon.src = iconPath;
+            icon.onload = function() {
+                ctx.drawImage(icon, x, y, 50, 50);
+                ctx.fillStyle = "white";
+                ctx.textAlign = "center";
+                ctx.fillText(name, x + 25, y + 70);
+            };
+        }
+    </script>
+</head>
+<body onload="home()">
+    <canvas></canvas>
+</body>
+</html>
