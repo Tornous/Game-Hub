@@ -6,5 +6,8 @@
     "dateTime.showDayOfMonth": true,
     "dateTime.showSeconds": true,
     "html.autoClosingTags": false,
-    "html.trace.server": "messages"
+    "html.trace.server": "messages",
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
 }
